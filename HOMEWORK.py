@@ -8,9 +8,9 @@ content_dict = responce.json()
 
 print("*** ІНФОРМАЦІЯ ПРО КРАЇНУ ***")
 print(f"Official name: {content_dict[0]["name"]["official"]}")
-print(f"Capital city: {content_dict[0]["capital"]}")
+print(f"Capital city: {content_dict[0]["capital"][0]}")
 print(f"Flag: {content_dict[0]["flag"]}")
-print(f"Population: {content_dict[0]["population"]}")
+print(f"Population: {content_dict[0]["population"]:,} people in {content_dict[0]["name"]["official"]} ")
 print(f"Geographic location: {content_dict[0]["latlng"][0]} широта та {content_dict[0]["latlng"][1]} довгота")
 
 rd = "https://catfact.ninja/fact"
